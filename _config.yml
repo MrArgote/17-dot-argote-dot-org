@@ -28,6 +28,8 @@ github_username:  MrArgote
 markdown: kramdown
 theme: minima
 
+permalink: pretty
+
 defaults:
   - scope:
       path: ""
