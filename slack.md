@@ -29,6 +29,12 @@ students:
 Have you saved your [CiMing2017.slack.com](https://ciming2017.slack.com) password in your LastPass vault?
 
 <style>
+  .page-content a {
+    border: solid 0.1em #BCF;
+    border-radius: 0.3em;
+    padding: 0.1em 1em;
+    background-color: #FFF;
+  }
   .student-tasks-grid span {
   display: inline-block;
   margin: 1em;

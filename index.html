@@ -2,18 +2,34 @@
 layout: default
 ---
 
+<style>
+  ul.post-list {
+
+  }
+  ul.post-list>li {
+    display: inline-block;
+    border: dotted 0.2em #444;
+    padding: 1em;
+  }
+</style>
+
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
+
 
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title | escape }}
+          </a>
         </h2>
+        <span>
+          {{ post.excerpt }}
+        </span>
       </li>
     {% endfor %}
   </ul>
