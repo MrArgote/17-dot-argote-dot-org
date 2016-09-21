@@ -23,7 +23,7 @@ students:
     18: false
     19: false
     20: true
-    21: false
+    21: true
 ---
 
 Have you saved your [CiMing2017.slack.com](https://ciming2017.slack.com) password in your LastPass vault?
