@@ -20,7 +20,7 @@ students:
     15: false
     16: false
     17: true
-    18: false
+    18: true
     19: false
     20: true
     21: true
