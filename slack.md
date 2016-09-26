@@ -11,8 +11,8 @@ students:
     06: true
     07: true
     08: true
-    09: false
-    10: false
+    09: true
+    10: true
     11: true
     12: true
     13: true
