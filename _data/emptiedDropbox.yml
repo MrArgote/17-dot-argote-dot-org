@@ -1,6 +1,6 @@
 students:
     01: false
-    02: false
+    02: true
     03: true
     04: false
     05: false

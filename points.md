@@ -67,3 +67,28 @@ Lastpass?
 {% endfor %}
 </div>
 
+Saved Dropbox password to Lastpass?
+
+
+<div class="student-tasks-grid" style="display:flex-wrap;">
+{% for student in site.data.savedDropboxToLastpass.students %}
+  <span>
+  {% if student[1] %}
+    <span class="done">
+      <span class="number">
+      {{ student[0] }}
+      </span>
+      Done
+    </span>
+  {% else %}
+    <span class="yet-to-do">
+      <span class="number">
+      {{ student[0] }}
+      </span>
+      Not ready?
+    </span>
+  {% endif %}
+  </span>
+{% endfor %}
+</div>
+
