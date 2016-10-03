@@ -22,7 +22,7 @@ nav-icon: /assets/four-dots.svg
   }
 </style>
 
-Dropbox:
+Emptied Dropbox?
 
 <div class="student-tasks-grid" style="display:flex-wrap;">
 {% for student in site.data.emptiedDropbox.students %}
