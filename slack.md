@@ -1,29 +1,6 @@
 ---
 title: Slack
-nav-icon: /assets/slack-symbol.svg
-students:
-  savedSlackPassToLastPass:
-    01: true
-    02: true
-    03: true
-    04: true
-    05: false
-    06: true
-    07: true
-    08: true
-    09: true
-    10: true
-    11: true
-    12: true
-    13: true
-    14: true
-    15: false
-    16: false
-    17: true
-    18: true
-    19: false
-    20: true
-    21: true
+#nav-icon: /assets/slack-symbol.svg
 ---
 
 Have you saved your [CiMing2017.slack.com](https://ciming2017.slack.com) password in your LastPass vault?
