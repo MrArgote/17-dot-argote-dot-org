@@ -11,9 +11,12 @@ nav-icon: /assets/four-dots.svg
   border-radius: 1em;
   padding: 0.3em;
   }
+  .student-tasks-grid span.done .number {
+  background-color: #EEE;
+  }
   .student-tasks-grid span.yet-to-do .number {
   background-color: #EEE;
-}
+  }
   .student-tasks-grid span.done {
   background-color: #2F8;
   }
@@ -21,6 +24,33 @@ nav-icon: /assets/four-dots.svg
   background-color: #F4A;
   }
 </style>
+
+<div class="student-tasks-grid" style="display:flex-wrap;">
+{% for student in site.data.whowho.students %}
+  <span>
+  {% if student[1] %}
+    <span class="done">
+      <span class="number">
+      {{ student[0] }}
+      </span>
+      <div>
+      <div> {{ student[1].snum }} </div>
+      <div> {{ student[1].zhname }} </div>
+      <div> {{ student[1].pyname }} </div>
+      </div>
+    </span>
+  {% else %}
+    <span class="yet-to-do">
+      <span class="number">
+      {{ student[0] }}
+      </span>
+      Not ready?
+    </span>
+  {% endif %}
+  </span>
+{% endfor %}
+</div>
+
 
 Emptied Dropbox?
 
@@ -67,8 +97,11 @@ Lastpass?
 {% endfor %}
 </div>
 
-Saved Dropbox password to Lastpass?
 
+
+{% comment %}
+
+Saved Dropbox password to Lastpass?
 
 <div class="student-tasks-grid" style="display:flex-wrap;">
 {% for student in site.data.savedDropboxToLastpass.students %}
@@ -91,4 +124,6 @@ Saved Dropbox password to Lastpass?
   </span>
 {% endfor %}
 </div>
+
+{% endcomment %}
 
