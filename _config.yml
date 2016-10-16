@@ -28,6 +28,8 @@ github_username:  MrArgote
 markdown: kramdown
 theme: minima
 
+port: 4017
+
 permalink: pretty
 
 defaults:
