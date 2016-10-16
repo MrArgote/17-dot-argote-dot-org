@@ -1,6 +1,6 @@
 ---
 title: Slack
-#nav-icon: /assets/slack-symbol.svg
+nav-icon: /assets/slack-symbol.svg
 ---
 
 Have you saved your [CiMing2017.slack.com](https://ciming2017.slack.com) password in your LastPass vault?
