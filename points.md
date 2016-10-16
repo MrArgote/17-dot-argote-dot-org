@@ -97,6 +97,29 @@ Lastpass?
 {% endfor %}
 </div>
 
+## Textbook
+
+<div class="student-tasks-grid" style="display:flex-wrap;">
+  {% for student in site.data.textbookWork.students %}
+    {% assign compSize = student[1].completed | size %}
+    {% assign inproSize = student[1].inProgress | size %}
+    {% assign listSize = compSize + inproSize %}
+    <span class="
+    {% if listSize > 1 %}
+    done
+    {% else %}
+    yet-to-do
+    {% endif %}
+    ">
+    <span class="number">
+      {{ student[0] }}
+    </span>
+    <span>
+      {{ student[1].completed | join: " // " }}
+    </span>
+    </span>
+  {% endfor %}
+</div>
 
 
 {% comment %}
