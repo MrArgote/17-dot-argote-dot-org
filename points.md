@@ -34,9 +34,12 @@ nav-icon: /assets/four-dots.svg
       {{ student[0] }}
       </span>
       <div>
+      <div> {{ student[1].enname }} </div>
       <div> {{ student[1].snum }} </div>
       <div> {{ student[1].zhname }} </div>
       <div> {{ student[1].pyname }} </div>
+      <div> {% if student[1].slacksn[0] %}@{% endif %}{{ student[1].slacksn[0] }} </div>
+      <div> {{ student[1].email[0] }} </div>
       </div>
     </span>
   {% else %}
@@ -51,6 +54,7 @@ nav-icon: /assets/four-dots.svg
 {% endfor %}
 </div>
 
+{% comment %}
 
 Emptied Dropbox?
 
@@ -97,6 +101,9 @@ Lastpass?
 {% endfor %}
 </div>
 
+
+{% endcomment %}
+
 ## Textbook
 
 <div class="student-tasks-grid" style="display:flex-wrap;">
@@ -111,13 +118,40 @@ Lastpass?
     yet-to-do
     {% endif %}
     ">
+      <span class="number">
+        {{ student[0] }}
+      </span>
+      <span>
+        {{ student[1].completed | join: " // " }}
+      </span>
+      <span class="{% if inproSize > 0 %}yet-to-do{% endif %}">
+        {{ student[1].inProgress | join: " // " }}
+      </span>
+    </span>
+  {% endfor %}
+</div>
+
+# Slack Responses
+
+<div class="student-tasks-grid" style="display:flex-wrap;">
+  {% for student in site.data.SlackResponses.students %}
+  <span class="done">
     <span class="number">
       {{ student[0] }}
     </span>
-    <span>
-      {{ student[1].completed | join: " // " }}
+    <span class="done">
+      {% assign biro = student[1].biro | size %}
+      {% assign budgies = student[1].budgies | size %}
+      {% assign superblocks = student[1].superblocks | size %}
+      {% assign spectacles = student[1].spectacles | size %}
+      {% assign moon = student[1].road-moon | size %}
+      {% assign lettuce = student[1].regrow-lettuce | size %}
+      {% assign roommates = student[1].unusual-roommates | size %}
+      {% assign introductions = student[1].self-introductions | size %}
+      {% assign total = biro | plus: budgies | plus: superblocks | plus: spectacles | plus: moon | plus: lettuce | plus: roommates | plus: introduction %}
+      {{ total }}
     </span>
-    </span>
+  </span>
   {% endfor %}
 </div>
 
