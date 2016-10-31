@@ -11,8 +11,6 @@ layout: default
     padding: 1em;
   }
   .link-list>li {
-    display: inline-block;
-    width: 22%;
     box-sizing: border-box;
   }
 </style>
