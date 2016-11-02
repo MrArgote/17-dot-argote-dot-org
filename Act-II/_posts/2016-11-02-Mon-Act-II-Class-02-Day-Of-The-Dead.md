@@ -5,8 +5,7 @@ title: Act II — Class 02 — Day of the Dead
 'El Dia de los Muertos' is a holiday celebrated yearly on November 1st and 2nd.
 'El Dia de los Muertos' is Spanish for 'The Day of the Dead.'
 
-Here's a link to the [Wikipedia article on the The Day of the Dead](https://en.wikipedia.org/wiki/Day_of_the_Dead)
-
+Here's a link to the [Wikipedia article on the The Day of the Dead](https://en.wikipedia.org/wiki/Day_of_the_Dead) and here are some great resources from [Google Arts & Culture about the 'Dia de Muertos'](https://www.google.com/culturalinstitute/beta/project/dia-de-muertos)
 
 ## Pero Like's video 'Dia De Los Muertos Makeup Looks'
 
