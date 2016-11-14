@@ -1,5 +1,5 @@
 ---
-title: Trump Favorite To Become Next US President
+title: Act II — Class 05 — Trump Favorite To Become Next US President
 ---
 
 ## U.S. 2016 Presidential Election
