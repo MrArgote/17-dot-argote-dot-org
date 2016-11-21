@@ -1,5 +1,5 @@
 ---
-title: Act II — Class 02 — Day of the Dead
+title: Act II — Class 2 — Day of the Dead
 ---
 
 'El Dia de los Muertos' is a holiday celebrated yearly on November 1st and 2nd.
