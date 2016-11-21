@@ -1,5 +1,5 @@
 ---
-title: Act II — Class 04 — Lyrics Training
+title: Act II — Class 4 — Lyrics Training
 ---
 
 
