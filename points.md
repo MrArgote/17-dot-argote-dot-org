@@ -3,26 +3,29 @@ title: Points
 nav-icon: /assets/four-dots.svg
 ---
 
-
-
 <style>
   .student-tasks-grid span {
-  display: inline-block;
-  border-radius: 1em;
-  padding: 0.3em;
-  }
-  .student-tasks-grid span.done .number {
-  background-color: #EEE;
-  }
-  .student-tasks-grid span.yet-to-do .number {
-  background-color: #EEE;
-  }
+    display: inline-block;
+    border-radius: 1em;
+    padding: 0.3em; }
   .student-tasks-grid span.done {
-  background-color: #2F8;
-  }
+    background-color: #2F8; }
+  .student-tasks-grid span.done .number {
+    background-color: #EEE; }
   .student-tasks-grid span.yet-to-do {
-  background-color: #F4A;
-  }
+    background-color: #F4A; }
+  .student-tasks-grid span.yet-to-do .number {
+    background-color: #EEE; }
+  .student-tasks-grid .number {
+    border-radius: 10em;
+    padding: 0.7em;
+    display: inline-block; }
+  .student-tasks-grid .done .number {
+    color: #404 ;
+    background-color: #fbf; }
+  .student-tasks-grid .yet-to-do .number {
+    color: #0FC ;
+    background-color: #F65; }
 </style>
 
 <div class="student-tasks-grid" style="display:flex-wrap;">
@@ -109,25 +112,71 @@ Lastpass?
 <div class="student-tasks-grid" style="display:flex-wrap;">
   {% for student in site.data.textbookWork.students %}
     {% assign compSize = student[1].completed | size %}
-    {% assign inproSize = student[1].inProgress | size %}
-    {% assign listSize = compSize + inproSize %}
-    <span class="
-    {% if listSize > 1 %}
-    done
-    {% else %}
-    yet-to-do
+    <div class="
+    {% if compSize > 1 %}
+      done
+      {% else %}
+        yet-to-do
     {% endif %}
     ">
-      <span class="number">
-        {{ student[0] }}
-      </span>
-      <span>
-        {{ student[1].completed | join: " // " }}
-      </span>
-      <span class="{% if inproSize > 0 %}yet-to-do{% endif %}">
-        {{ student[1].inProgress | join: " // " }}
-      </span>
-    </span>
+      <div class="number">
+      {{ student[0] }}
+      </div>
+      <div>
+      {% if student[1].completed["comment"] != empty %}
+        pages done:
+        {{ student[1].completed["comment"] }}
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["01"] != empty %}
+        unit 1:
+        {{ student[1].completed["01"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["02"] != empty %}
+        unit 2:
+        {{ student[1].completed["02"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["03"] != empty %}
+        unit 3:
+        {{ student[1].completed["03"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["04"] != empty %}
+        unit 4:
+        {{ student[1].completed["04"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["05"] != empty %}
+        unit 5:
+        {{ student[1].completed["05"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["06"] != empty %}
+        unit 6:
+        {{ student[1].completed["06"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["07"] != empty %}
+        unit 7:
+        {{ student[1].completed["07"] }} point
+      {% endif %}
+      </div>
+      <div>
+      {% if student[1].completed["08"] != empty %}
+        unit 8:
+        {{ student[1].completed["08"] }} point
+      {% endif %}
+      </div>
+    </div>
   {% endfor %}
 </div>
 
@@ -140,16 +189,14 @@ Lastpass?
       {{ student[0] }}
     </span>
     <span class="done">
-      {% assign biro = student[1].biro | size %}
-      {% assign budgies = student[1].budgies | size %}
-      {% assign superblocks = student[1].superblocks | size %}
-      {% assign spectacles = student[1].spectacles | size %}
-      {% assign moon = student[1].road-moon | size %}
-      {% assign lettuce = student[1].regrow-lettuce | size %}
-      {% assign roommates = student[1].unusual-roommates | size %}
-      {% assign introductions = student[1].self-introductions | size %}
-      {% assign total = biro | plus: budgies | plus: superblocks | plus: spectacles | plus: moon | plus: lettuce | plus: roommates | plus: introduction %}
-      {{ total }}
+      <div> biro = {{ student[1].biro }} </div>
+      <div> budgies = {{ student[1].budgies }} </div>
+      <div> superblocks = {{ student[1].superblocks }} </div>
+      <div> spectacles = {{ student[1].spectacles }} </div>
+      <div> moon = {{ student[1].road-moon }} </div>
+      <div> lettuce = {{ student[1].regrow-lettuce }} </div>
+      <div> roommates = {{ student[1].unusual-roommates }} </div>
+      <div> introductions = {{ student[1].self-introductions }} </div>
     </span>
   </span>
   {% endfor %}
