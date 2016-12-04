@@ -111,72 +111,34 @@ Lastpass?
 
 <div class="student-tasks-grid" style="display:flex-wrap;">
   {% for student in site.data.textbookWork.students %}
-    {% assign compSize = student[1].completed | size %}
+
+    {% assign pagesDone = 0 %}
+      {% for unit in student[1].completed %}
+          {% assign pagesDone = pagesDone | plus: unit[1].size %}
+      {% endfor %}
+
     <div class="
-    {% if compSize > 1 %}
-      done
-      {% else %}
-        yet-to-do
-    {% endif %}
+      {% if pagesDone > 1 %} done
+        {% else %} yet-to-do
+      {% endif %}
     ">
-      <div class="number">
-      {{ student[0] }}
-      </div>
-      <div>
-      {% if student[1].completed["comment"] != empty %}
-        pages done:
-        {{ student[1].completed["comment"] }}
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["01"] != empty %}
-        unit 1:
-        {{ student[1].completed["01"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["02"] != empty %}
-        unit 2:
-        {{ student[1].completed["02"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["03"] != empty %}
-        unit 3:
-        {{ student[1].completed["03"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["04"] != empty %}
-        unit 4:
-        {{ student[1].completed["04"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["05"] != empty %}
-        unit 5:
-        {{ student[1].completed["05"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["06"] != empty %}
-        unit 6:
-        {{ student[1].completed["06"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["07"] != empty %}
-        unit 7:
-        {{ student[1].completed["07"] }} point
-      {% endif %}
-      </div>
-      <div>
-      {% if student[1].completed["08"] != empty %}
-        unit 8:
-        {{ student[1].completed["08"] }} point
-      {% endif %}
-      </div>
+
+      <div class="number"> {{ student[0] }} </div>
+
+      <div> {% if student[1].comment != empty %}
+        notes: {{ student[1].comment }}
+      {% endif %} </div>
+
+      {% for unit in student[1].completed %}
+        {% if unit != empty %}
+          <div>
+            unit {{ unit[0] }} : page {{ unit[1] | join: ', ' }}
+          </div>
+        {% endif %}
+      {% endfor %}
+
     </div>
+    total: {{ pagesDone }}
   {% endfor %}
 </div>
 
@@ -184,21 +146,21 @@ Lastpass?
 
 <div class="student-tasks-grid" style="display:flex-wrap;">
   {% for student in site.data.SlackResponses.students %}
-  <span class="done">
-    <span class="number">
-      {{ student[0] }}
-    </span>
     <span class="done">
-      <div> biro = {{ student[1].biro }} </div>
-      <div> budgies = {{ student[1].budgies }} </div>
-      <div> superblocks = {{ student[1].superblocks }} </div>
-      <div> spectacles = {{ student[1].spectacles }} </div>
-      <div> moon = {{ student[1].road-moon }} </div>
-      <div> lettuce = {{ student[1].regrow-lettuce }} </div>
-      <div> roommates = {{ student[1].unusual-roommates }} </div>
-      <div> introductions = {{ student[1].self-introductions }} </div>
+      <span class="number">
+        {{ student[0] }}
+      </span>
+      <span class="done">
+        <div> biro = {{ student[1].biro }} </div>
+        <div> budgies = {{ student[1].budgies }} </div>
+        <div> superblocks = {{ student[1].superblocks }} </div>
+        <div> spectacles = {{ student[1].spectacles }} </div>
+        <div> moon = {{ student[1].road-moon }} </div>
+        <div> lettuce = {{ student[1].regrow-lettuce }} </div>
+        <div> roommates = {{ student[1].unusual-roommates }} </div>
+        <div> introductions = {{ student[1].self-introductions }} </div>
+      </span>
     </span>
-  </span>
   {% endfor %}
 </div>
 
