@@ -6,14 +6,14 @@ computer-lab: true
 ## Trump and Tsai Telephone Talk
 
 - Report:
-- What happened?
-- When did it happen?
-- How did it happen?
-- Who was involved in what happened?
-- Why did it happen?
-- What might happen now?
-- What should have happened?
-- Why is it newsworthy?
+-- What happened?
+-- When did it happen?
+-- How did it happen?
+-- Who was involved in what happened?
+-- Why did it happen?
+-- What might happen now?
+-- What should have happened?
+-- Why is it newsworthy?
 
 ## Cute Coyote
 
