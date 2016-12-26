@@ -1,5 +1,6 @@
 ---
 title: Act II — Class 6 — Mannequin Challenge
+computer-lab: true
 ---
 
 ## Mannequin Challenge
