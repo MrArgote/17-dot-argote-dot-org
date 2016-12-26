@@ -1,5 +1,6 @@
 ---
 title: Act II — Class 4 — Lyrics Training
+computer-lab: true
 ---
 
 
