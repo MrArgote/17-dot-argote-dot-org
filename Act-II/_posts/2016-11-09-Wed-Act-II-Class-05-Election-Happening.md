@@ -1,5 +1,6 @@
 ---
 title: Act II — Class 5 — Trump Favorite To Become Next US President
+computer-lab: true
 ---
 
 ## U.S. 2016 Presidential Election
