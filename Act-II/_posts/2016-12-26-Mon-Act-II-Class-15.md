@@ -26,7 +26,7 @@ computer-lab: true
   <li>
     <ul>
       <li>
-        <a href="">Taiwan 'Nazi rally' school principal resigns</a>
+        <a href="http://www.bbc.com/news/world-asia-38437876">Taiwan 'Nazi rally' school principal resigns</a>
       </li>
     </ul>
   </li>
