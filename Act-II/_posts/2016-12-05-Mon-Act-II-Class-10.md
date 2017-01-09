@@ -3,6 +3,9 @@ title: Act II — Class 10
 computer-lab: true
 ---
 
+- Trump and Tsai Telephone Talk
+- Cute Coyote
+
 ## Trump and Tsai Telephone Talk
 
 - Report:
