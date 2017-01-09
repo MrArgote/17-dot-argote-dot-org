@@ -3,6 +3,10 @@ title: Act III — Class 02
 computer-lab: true
 ---
 
+- Ignorance in the News
+  - Taiwan Tops The Wrong Kind of Survey
+  - High School History Teacher's Students Do Nazi Cosplay
+
 
 ### Newspaper Story: Taiwan Tops The Wrong Kind of Survey
 
