@@ -1,5 +1,6 @@
 ---
 title: Slack
+header-nav: true
 nav-icon: /assets/slack-symbol.svg
 ---
 

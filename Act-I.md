@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Act I
+header-nav: false
 nav-icon: /assets/one.svg
 ---
 
