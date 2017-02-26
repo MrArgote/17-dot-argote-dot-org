@@ -21,7 +21,7 @@ computer-lab: true
 ## Cute Coyote
 
 
-<img src="/assets/blog/Act-II/2016-12-05-screenshot-1.png" style="float: right;">
+<img src="/assets/blog/Fall/Act-II/2016-12-05-screenshot-1.png" style="float: right;">
 
 
 "I found this cute little dog outside...  
