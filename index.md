@@ -7,8 +7,10 @@ layout: default
 
   }
   ul.post-list>li {
+    display: inline-block;
     border: dotted 0.2em #444;
     padding: 1em;
+    max-width: 14em;
   }
   .link-list>li {
     box-sizing: border-box;
@@ -18,7 +20,8 @@ layout: default
 <div class="home">
   <h1 class="page-heading">Links To Posts</h1>
   <ul class="post-list link-list">
-    {% for post in site.posts %}
+    {% assign posts = site.posts | where:"categories","Spring" %}
+    {% for post in posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
@@ -32,4 +35,6 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-/div>
+</div>
+
+  <p>take a look at <a href="{{ "/archive/" | prepend: site.baseurl }}">old posts</a></p>
