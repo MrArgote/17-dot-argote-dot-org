@@ -9,6 +9,7 @@ layout: default
   ul.post-list>li {
     display: inline-block;
     border: dotted 0.2em #444;
+    border-radius: 0.4em;
     padding: 1em;
     max-width: 14em;
   }
