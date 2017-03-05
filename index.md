@@ -6,7 +6,7 @@ layout: default
   ul.post-list {
 
   }
-  ul.post-list>li {
+  ul.post-list>ul>li {
     display: inline-block;
     border: dotted 0.2em #444;
     border-radius: 0.4em;
@@ -23,6 +23,13 @@ layout: default
   <ul class="post-list link-list">
     {% assign posts = site.posts | where:"categories","Spring" %}
     {% for post in posts %}
+      {% assign currentdate = post.date | date: "%a, %B %d, %Y" %}
+      {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h1>{{ currentdate | date: "%a %b %d" }}</h1>
+      <ul>
+      {% assign date = currentdate %}
+      {% endif %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
@@ -34,6 +41,7 @@ layout: default
           {{ post.excerpt }}
         </span>
       </li>
+      {% if forloop.last %}</ul>{% endif %}
     {% endfor %}
   </ul>
 </div>
