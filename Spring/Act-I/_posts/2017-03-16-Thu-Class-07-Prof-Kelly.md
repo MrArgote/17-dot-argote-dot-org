@@ -1,5 +1,5 @@
 ---
-title: I-8 — Live From South Korea
+title: I-7 — Live From South Korea
 computer-lab: true
 ---
 
