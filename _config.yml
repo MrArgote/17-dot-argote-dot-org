@@ -29,6 +29,7 @@ markdown: kramdown
 theme: minima
 
 port: 4017
+future: true
 
 permalink: pretty
 
