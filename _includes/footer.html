@@ -25,6 +25,11 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+          {% if site.facebook_page_url %}
+          <li>
+            {% include icon-facebook.html page=site.facebook_page_url name=site.facebook_page_name %}
+          </li>
+          {% endif %}
         </ul>
       </div>
 
