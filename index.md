@@ -37,9 +37,6 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h2>
-        <span>
-          {{ post.excerpt }}
-        </span>
       </li>
       {% if forloop.last %}</ul>{% endif %}
     {% endfor %}
