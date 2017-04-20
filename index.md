@@ -21,7 +21,7 @@ layout: default
 <div class="home">
   <h1 class="page-heading">Links To Posts</h1>
   <ul class="post-list link-list">
-    {% assign posts = site.posts | where:"categories","Spring" %}
+    {% assign posts = site.posts | where:"categories","Act-II" | where:"categories","Spring" %}
     {% for post in posts %}
       {% assign currentdate = post.date | date: "%a, %B %d, %Y" %}
       {% if currentdate != date %}
@@ -43,4 +43,4 @@ layout: default
   </ul>
 </div>
 
-  <p>take a look at <a href="{{ "/archive/" | prepend: site.baseurl }}">old posts</a></p>
+  <p>take a look at <a href="{{ "/archive-spring-act-i/" | prepend: site.baseurl }}">old posts</a></p>
