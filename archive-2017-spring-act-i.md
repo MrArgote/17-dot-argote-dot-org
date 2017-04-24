@@ -46,4 +46,4 @@ layout: default
   </ul>
 </div>
 
-  <p>take a look at <a href="{{ "/archive/" | prepend: site.baseurl }}">old posts</a></p>
+  <p>take a look at <a href="{{ "/archive-2016-fall/" | prepend: site.baseurl }}">old posts</a></p>

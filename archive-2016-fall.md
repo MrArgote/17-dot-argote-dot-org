@@ -3,24 +3,18 @@ layout: default
 ---
 
 <style>
-  ul.post-list {
-
-  }
   ul.post-list>li {
     border: dotted 0.2em #444;
-    padding: 1em;
-  }
+    padding: 1em; }
   .link-list>li {
-    display: inline-block;
-    width: 22%;
-    box-sizing: border-box;
-  }
+    box-sizing: border-box; }
 </style>
 
 <div class="home">
   <h1 class="page-heading">Links To Posts</h1>
   <ul class="post-list link-list">
-    {% for post in site.posts %}
+    {% assign posts = site.posts | where:"categories","Fall" %}
+    {% for post in posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
@@ -34,4 +28,10 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-/div>
+</div>
+
+<p>take a look at
+  <a href="{{ "/" | prepend: site.baseurl }}">
+    current posts
+  </a>
+</p>
