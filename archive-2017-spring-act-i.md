@@ -21,7 +21,7 @@ layout: default
 <div class="home">
   <h1 class="page-heading">Links To Posts</h1>
   <ul class="post-list link-list">
-    {% assign posts = site.posts | where:"categories","Spring" %}
+    {% assign posts = site.posts | where:"categories","Spring" | where:"categories","Act-I" %}
     {% for post in posts %}
       {% assign currentdate = post.date | date: "%a, %B %d, %Y" %}
       {% if currentdate != date %}
