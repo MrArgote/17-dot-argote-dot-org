@@ -43,4 +43,4 @@ layout: default
   </ul>
 </div>
 
-  <p>take a look at <a href="{{ "/archive-spring-act-i/" | prepend: site.baseurl }}">old posts</a></p>
+  <p>take a look at <a href="{{ "/archive-2017-spring-act-i/" | prepend: site.baseurl }}">old posts</a></p>
